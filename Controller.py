@@ -94,10 +94,9 @@ class Controller:
 
     def Reset(self):
         errors = self.model.ResetTables()
-        self.view.ShowMessage("Output reset result (if nothing output command was success): ")
+        self.view.ShowMessage("Output reset result: ")
         for each in errors:
-            if each != self.model.s_sSuccess:
-                self.view.ShowErrorMessage(each)
+            self.view.ShowMessage(each)
 
     def Search(self):
         while True:
